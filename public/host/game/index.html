@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game | KahootClone</title>
+        <link rel = "stylesheet" href = "../../css/hostGameView.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+    </head>
+    <body style="display: none">
+        <h4 id = "questionNum">Question 1 / x</h4>
+        <h4 id = "playersAnswered">Players Answered: 0 / x</h4>
+        <h3 id = "timerText">Time Left:<span id = "num"> 20</span></h3>
+        
+        
+        <div class = "square" id = "square1"></div>
+        <div class = "square" id = "square2"></div>
+        <div class = "square" id = "square3"></div>
+        <div class = "square" id = "square4"></div>
+        
+        <h2 id = "question">Question</h2>
+        <h3 id = "answer1">Answer</h3>
+        <br>
+        <h3 id = "answer2">Answer</h3>
+        <br>
+        <h3 id = "answer3">Answer</h3>
+        <br>
+        <h3 id = "answer4">Answer</h3>
+        
+        <br>
+        <button onclick = "nextQuestion()" id = "nextQButton">Next Question</button>
+        
+        <h2 id = "winnerTitle">Top 5 Players</h4>
+        <h3 id = "winner1">1.</h3>
+        <h3 id = "winner2">2.</h3>
+        <h3 id = "winner3">3.</h3>
+        <h3 id = "winner4">4.</h3>
+        <h3 id = "winner5">5.</h3>
+        
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+`   <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyCbhRPSfdqZOQR4LtwFPx3s8F3Dd-LPL7c",
+            authDomain: "group-project-5e98a.firebaseapp.com",
+            databaseURL: "https://group-project-5e98a.firebaseio.com",
+            projectId: "group-project-5e98a",
+            storageBucket: "group-project-5e98a.appspot.com",
+            messagingSenderId: "630085762488",
+            appId: "1:630085762488:web:a1651f0a8083ee028d634d",
+            measurementId: "G-M42GJVNBBX",
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script>
+
+<script src="/js/index.js"></script>
+    <script src="/js/firebase_auth.js"></script>
+        <script src = "../../socket.io/socket.io.js"></script>
+        <script src = "../../js/libs/jqueryLibrary.js"></script>
+        <script src = "../../js/libs/deparam.js"></script>
+        <script src = "../../js/hostGame.js"></script>
+    </body>
+</html>

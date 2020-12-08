@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Creator | KahootClone</title>
+        <link rel = "stylesheet" href = "../../css/quizCreator.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    </head>
+    <body onload = "setBGColor()" style="display: none">
+        <h1 id = "title">Kahoot Quiz Creator Studio</h1>
+        
+        <div class="form-field">
+            <label id = "quizTitle">Quiz Title</label>
+            <input id = "name" type = "text" name="name" autofocus/>
+        </div>
+        <br>
+        <br>
+        <div id = "allQuestions">
+            <div id="question-field">
+                <label>Question 1: </label>
+                <input class = "question" id = "q1" type = "text" autofocus/>
+                <br>
+                <br>
+                <label>Answer 1: </label>
+                <input id = "1a1" type = "text" autofocus/>
+                <label>Answer 2: </label>
+                <input id = "1a2" type = "text" autofocus/>
+                <br>
+                <br>
+                <label>Answer 3: </label>
+                <input id = "1a3"  type = "text"autofocus/>
+                <label>Answer 4: </label>
+                <input id = "1a4"  type = "text" autofocus/>
+                <br>
+                <br>
+                <label>Correct Answer (1-4) :</label>
+                <input class = "correct" id = "correct1"  type = "number" autofocus/>
+            </div>
+        </div>
+        <br>
+        <button onclick = "addQuestion()">Add another question</button>
+        
+        <br>
+        <br>
+        
+        <div class="form-field">
+            <button onclick = "updateDatabase()">Create Quiz</button>
+        </div>
+        
+        <br>
+        
+        <button onclick = 'cancelQuiz()'>Cancel quiz and return to quiz selection</button>
+        
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    `   <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+
+        <!-- Add Firebase products that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+
+        <script>
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            var firebaseConfig = {
+                apiKey: "AIzaSyCbhRPSfdqZOQR4LtwFPx3s8F3Dd-LPL7c",
+                authDomain: "group-project-5e98a.firebaseapp.com",
+                databaseURL: "https://group-project-5e98a.firebaseio.com",
+                projectId: "group-project-5e98a",
+                storageBucket: "group-project-5e98a.appspot.com",
+                messagingSenderId: "630085762488",
+                appId: "1:630085762488:web:a1651f0a8083ee028d634d",
+                measurementId: "G-M42GJVNBBX",
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+
+            const auth = firebase.auth();
+            const db = firebase.firestore();
+        </script>
+
+<script src="/js/index.js"></script>
+
+    <script src="/js/firebase_auth.js"></script>
+        
+        <script src = "../../socket.io/socket.io.js"></script>
+        <script src = "../../js/quizCreator.js"></script>
+    </body>
+</html>

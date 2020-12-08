@@ -1,24 +1,22 @@
 {
-  "name": "cs412_group3",
+  "name": "kahootclone",
   "version": "1.0.0",
-  "description": "cosc-412 group project",
+  "description": "A kahoot website clone",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kampofo/CS412_Group3.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kampofo/CS412_Group3/issues"
-  },
-  "homepage": "https://github.com/kampofo/CS412_Group3#readme",
   "dependencies": {
     "ejs": "^3.1.5",
-    "express": "^4.17.1",
-    "firebase": "^8.0.0"
+    "express": "^4.16.3",
+    "moment": "^2.22.1",
+    "mongodb": "^3.0.10",
+    "mongoose": "^5.1.5",
+    "socket.io": "^2.1.1"
+  },
+  "devDependencies": {
+    "expect": "^23.0.1"
   }
 }

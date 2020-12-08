@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Join | KahootClone</title>
+        <link rel = "stylesheet" href = "../css/index.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="display: none">
+        <h1 id = "title">Join a Game</h1>
+        <form action="/player/">
+                <div class="form-field">
+                    <label id = "label">Display Name</label>
+                    <input id = "name" type = "text" name="name" autofocus/>
+                </div>
+                <br>
+                <div class="form-field">
+                    <label id = "label">Game Pin</label>
+                    <input id = "pin" type="number" name="pin"/>
+                </div>
+                <br>
+                <div class="form-field">
+                    <button id = "joinButton">Join</button>
+                </div>
+        </form>
+        <br/>
+        <center><a href = "/create/" id = "host">Click here to host a Kahoot!</a></center>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    `   <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+
+        <!-- Add Firebase products that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+
+        <script>
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            var firebaseConfig = {
+                apiKey: "AIzaSyCbhRPSfdqZOQR4LtwFPx3s8F3Dd-LPL7c",
+                authDomain: "group-project-5e98a.firebaseapp.com",
+                databaseURL: "https://group-project-5e98a.firebaseio.com",
+                projectId: "group-project-5e98a",
+                storageBucket: "group-project-5e98a.appspot.com",
+                messagingSenderId: "630085762488",
+                appId: "1:630085762488:web:a1651f0a8083ee028d634d",
+                measurementId: "G-M42GJVNBBX",
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+
+            const auth = firebase.auth();
+            const db = firebase.firestore();
+        </script>
+
+<script src="/js/index.js"></script>
+
+    <script src="/js/firebase_auth.js"></script>
+    </body>
+</html>
