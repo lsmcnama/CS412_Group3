@@ -1,0 +1,17 @@
+#dashboard {
+    margin-top: 5%;
+    text-align: center;
+}
+
+body {
+    height: 100vh;
+    background-color: #fcd74e !important;
+}
+
+#userImage {
+    width: 20%;
+    display: block;
+    margin: auto;
+    padding: 5% 0;
+    border-radius: 50%;
+}
